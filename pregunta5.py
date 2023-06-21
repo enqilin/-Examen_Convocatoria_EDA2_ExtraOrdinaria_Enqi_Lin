@@ -55,7 +55,6 @@ def hijo_sin_amor(mochila):
         else:
             numero += 1
 
-    
 def anillo_de_poder(mochila):
     if mochila.cima() == 'anillo de poder':
         return True
