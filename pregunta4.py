@@ -18,11 +18,11 @@ class Artefactovaliosos:
 class Artefactovalioso:
     lista = []
 
-    with open('artefactos.csv','r') as fichero
-    reader = csv.reader(fichero, delimiter=';')
-    for nombre , peso, precio,fecha in reader:
-        arte = Artefactovaliosos(nombre , peso, precio,fecha)
-        lista.append(arte)
+    with open('artefactos.csv','r') as fichero:
+        reader = csv.reader(fichero, delimiter=';')
+        for nombre , peso, precio,fecha in reader:
+            arte = Artefactovaliosos(nombre , peso, precio,fecha)
+            lista.append(arte)
 
 
     @staticmetod
