@@ -25,23 +25,21 @@ class Artefactovalioso:
             lista.append(arte)
 
 
-    @staticmetod
+    @staticmethod
     def buscar():
         for arte in Artefactovalioso.lista:
             factor = sorted(arte.fecha)
         return factor
 
-    @staticmetod
+    @staticmethod
     def crear(nombre , peso, precio,fecha):
         arte =  Artefactovaliosos(nombre , peso, precio,fecha)
         Artefactovalioso.lista.append(arte)
         return arte
-    @staticmetod
+    @staticmethod
     def modificar(nombre , peso, precio,fecha):
         for indice, arte in enumerate(Artefactovalioso.lista):
             a = input("Modificar")
-            if arte.a == a:
-                Artefactovalioso.lista[indice]
     
 
 

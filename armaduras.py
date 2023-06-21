@@ -25,26 +25,26 @@ class Armadura:
     with open('arma.csv','r') as fichero:
         reader = csv.reader(fichero, delimiter = ';')
         for nombre, rango, codigo,ciherente,siglo,armadura,escuadra in reader:
-            armadura = Armaduras(nombre,rnago)
+            armadura = Armaduras(nombre,rango)
             armadura.clasificacion(codigo,ciherente,siglo,armadura,escuadra)
             lista.append(armadura)
 
     
-    @staticmetod
+    @staticmethod
     def buscar(nombre):
         for armadura in Armadura.lista:
             if armadura.nombre == nombre
             return nombre
 
-    @staticmetod
-    def crear(nombre, rango, codigo,ciherente,siglo,armadura,escuadra)
-    armadura = Armaduras(nombre,rango)
-    armadura.clasificacion(codigo,ciherente,siglo,armadura,escuadra)
-    Armadura.lista.append(armadura)
-    Armadura.guardar()
-    return armadura
+    @staticmethod
+    def crear(nombre, rango, codigo,ciherente,siglo,armadura,escuadra):
+        armadura = Armaduras(nombre,rango)
+        armadura.clasificacion(codigo,ciherente,siglo,armadura,escuadra)
+        Armadura.lista.append(armadura)
+        Armadura.guardar()
+        return armadura
     
-    @staticmetod
+    @staticmethod
     def guardar():
         with open('arma.csv','w', newline='\n') as fichero:
             writer = csv.writer(fichero,delimiter=';')
