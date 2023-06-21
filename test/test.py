@@ -2,7 +2,7 @@ import unittest
 import armaduras as ar
 import pregunta3 as pr
 import pregunta4 as p
-
+import copy
 #Prueba a mostrar los datos de algunos artefactos valiosos ordenados por su fecha de caducidad y a modificar algún valor, por ejemplo, prueba a modificar el precio de un de la conserva
 class test(unittest.TestCase):
     def setUp(self):
@@ -26,5 +26,6 @@ class test(unittest.TestCase):
         self.assertEqual(arte,"Micher pesa 4.4")
     def test_modificar(self):
         arte = p.Artefactovaliosos('Micher',4.4,5,1202)
-        arte.modificar('Micher',4.7,5,1202)
-        self.assertEqual(arte,"Micher pesa 4.7")
+        arte_modificado = p.Artefactovaliosos('Micher',4.7,5,1202)
+        self.assertEqual(arte,"Micher pesa 4.5")
+        self.assertEqual(arte_modificado,"Micher pesa 4.7")

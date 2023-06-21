@@ -38,7 +38,7 @@ class Artefactovalioso:
         Artefactovalioso.guardar()
         return arte
     @staticmethod
-    def modificar(nombre , peso, precio,fecha):
+    def modificar(nombre, peso, precio,fecha):
         for indice, arte in enumerate(Artefactovalioso.lista):
             if arte.precio == precio:
                 arte.peso = peso
