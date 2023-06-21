@@ -33,15 +33,28 @@ class Artefactovalioso:
 
     @staticmethod
     def crear(nombre , peso, precio,fecha):
-        arte =  Artefactovaliosos(nombre , peso, precio,fecha)
+        arte =  Artefactovaliosos(nombre, peso, precio,fecha)
         Artefactovalioso.lista.append(arte)
+        Artefactovalioso.guardar()
         return arte
     @staticmethod
     def modificar(nombre , peso, precio,fecha):
         for indice, arte in enumerate(Artefactovalioso.lista):
-            a = input("Modificar")
-    
-
+            if arte.precio == precio:
+                arte.peso = peso
+                arte.fecha = fecha
+                arte.nombre = nombre
+                Artefactovalioso.lista[indice].peso = peso
+                Artefactovalioso.lista[indice].fecha = fecha
+                Artefactovalioso.lista[indice].nombre = nombre
+                Artefactovalioso.guardar()
+                return Artefactovalioso.lista[indice]
+    @staticmethod
+    def guardar():
+        with open('artefactos.csv','w', newline='\n') as fichero:
+            writer = csv.writer(fichero,delimiter=';')
+            for arte in Artefactovalioso.lista:
+                writer.writerow(arte.nombre,arte.peso,arte.precio,arte.fecha)
 
 
 

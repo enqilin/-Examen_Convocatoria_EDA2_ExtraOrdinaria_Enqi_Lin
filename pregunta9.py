@@ -70,7 +70,6 @@ class Grafo(object):
             ant.sig = nodo
         origen.tamanio += 1
 
-    def
 
 class Arista(object):
     def __init__(self):
