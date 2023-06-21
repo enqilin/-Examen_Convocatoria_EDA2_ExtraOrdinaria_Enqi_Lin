@@ -52,6 +52,5 @@ class Armadura:
                 writer.writerow(armadura.to_dict.values())
 
 
-
-
-
+if __name__=='__main__':
+    ar = 
