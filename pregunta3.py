@@ -1,4 +1,6 @@
 
+
+
 import csv
 
 class Armaduras:
@@ -14,6 +16,8 @@ class Armaduras:
         self.armadura = None
         self.escuadra = None
 
+    def ___str(self):
+        return f'{self.nombre} tiene el range {self.rango}.'
     def to_dict(self):
         return {'nombre':{self.nombre},'rango':{self.rango},'codigo':{self.codigo},'ciherente':{self.ciherente},
         'siglo':{self.siglo},'armadura':{self.armadura},'escuadra':{self.escuadra}}
@@ -53,5 +57,7 @@ class Armadura:
 
 
 
-
-
+if __name__=='__main__':
+    arm = Armaduras('Jose', 9)
+    arm.clasificacion('Mk',9,9,9,6)
+    print(arm)
