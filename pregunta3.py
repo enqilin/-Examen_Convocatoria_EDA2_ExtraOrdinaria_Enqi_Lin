@@ -16,7 +16,7 @@ class Armaduras:
         self.armadura = None
         self.escuadra = None
 
-    def ___str(self):
+    def __str__(self):
         return f'{self.nombre} tiene el range {self.rango}.'
     def to_dict(self):
         return {'nombre':{self.nombre},'rango':{self.rango},'codigo':{self.codigo},'ciherente':{self.ciherente},
