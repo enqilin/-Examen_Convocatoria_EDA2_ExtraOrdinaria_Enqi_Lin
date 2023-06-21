@@ -9,12 +9,12 @@ class Armaduras:
         self.rango = rango
         print('ha creado con exito')
 
-    def clasificacion(self):
-        self.codigo = None
-        self.ciherente = None
-        self.siglo = None
-        self.armadura = None
-        self.escuadra = None
+    def clasificacion(self,codigo,ciherente,siglo,armadura,escuadra):
+        self.codigo = codigo
+        self.ciherente = ciherente
+        self.siglo = siglo
+        self.armadura = armadura
+        self.escuadra = escuadra
 
     def __str__(self):
         return f'{self.nombre} tiene el range {self.rango}.'

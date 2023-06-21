@@ -7,12 +7,13 @@ class Armaduras:
         self.rango = rango
         print('ha creado con exito')
 
-    def clasificacion(self):
-        self.codigo = None
-        self.ciherente = None
-        self.siglo = None
-        self.armadura = None
-        self.escuadra = None
+    def clasificacion(self,codigo,ciherente,siglo,armadura,escuadra):
+        self.codigo = codigo
+        self.ciherente = ciherente
+        self.siglo = siglo
+        self.armadura = armadura
+        self.escuadra = escuadra
+
 
     def to_dict(self):
         return {'nombre':{self.nombre},'rango':{self.rango},'codigo':{self.codigo},'ciherente':{self.ciherente},
@@ -33,8 +34,8 @@ class Armadura:
     @staticmethod
     def buscar(nombre):
         for armadura in Armadura.lista:
-            if armadura.nombre == nombre
-            return nombre
+            if armadura.nombre == nombre:
+                return nombre
 
     @staticmethod
     def crear(nombre, rango, codigo,ciherente,siglo,armadura,escuadra):
@@ -53,4 +54,6 @@ class Armadura:
 
 
 if __name__=='__main__':
-    ar = 
+    arm = Armaduras('Jose', 9)
+    arm.clasificacion('Mk',9,9,9,6)
+    print(arm)
