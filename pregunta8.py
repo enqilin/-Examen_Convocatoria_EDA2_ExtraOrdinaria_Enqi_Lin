@@ -75,3 +75,4 @@ if __name__=='__main__':
     arbol.insertar('0',0.05)
     arbol.insertar('M',0.09)
     arbol.insertar('T',0.15)
+    arbol.comprimir("A1F3M0T")
